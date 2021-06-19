@@ -7,12 +7,12 @@ services:
       - name: userservice
         paths:
           - /user
-  - name: authservice
-    url: http://userservice:5000/
+  - name: postservice
+    url: http://postservice:5000/
     routes:
-      - name: authservice
+      - name: postservice
         paths:
-          - /auth
+          - /post
 
 plugins:
   - name: rate-limiting
