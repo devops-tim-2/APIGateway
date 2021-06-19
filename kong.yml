@@ -19,3 +19,4 @@ plugins:
     config:
       minute: 20
       policy: local
+  
