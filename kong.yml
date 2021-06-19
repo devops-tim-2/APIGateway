@@ -1,0 +1,22 @@
+_format_version: "2.1"
+
+services:
+  - name: userservice
+    url: http://userservice:5000/
+    routes:
+      - name: userservice
+        paths:
+          - /user
+  - name: postservice
+    url: http://postservice:5000/
+    routes:
+      - name: postservice
+        paths:
+          - /post
+
+plugins:
+  - name: rate-limiting
+    config:
+      minute: 20
+      policy: local
+  
