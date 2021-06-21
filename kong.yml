@@ -13,10 +13,16 @@ services:
       - name: postservice
         paths:
           - /post
+  - name: mediaservice
+    url: http://mediaservice:5000/
+    routes:
+      - name: mediaservice
+        paths:
+          - /media
 
 plugins:
   - name: rate-limiting
     config:
-      minute: 20
+      minute: 200
       policy: local
   
