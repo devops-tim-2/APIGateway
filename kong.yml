@@ -19,6 +19,12 @@ services:
       - name: mediaservice
         paths:
           - /media
+  - name: hashtagservice
+    url: http://hashtagservice:5000/
+    routes:
+      - name: hashtagservice
+        paths:
+          - /hashtag
 
 plugins:
   - name: rate-limiting
