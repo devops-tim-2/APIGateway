@@ -25,6 +25,12 @@ services:
       - name: hashtagservice
         paths:
           - /hashtag
+  - name: newsfeedservice
+    url: http://newsfeedservice:5000/
+    routes:
+      - name: newsfeedservice
+        paths:
+          - /newsfeed
 
 plugins:
   - name: rate-limiting
