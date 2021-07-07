@@ -43,7 +43,7 @@ services:
       - name: adminservice
         paths:
           - /admin
-  - name: adminservice
+  - name: agentservice
     url: http://agentservice:5000/
     routes:
       - name: agentservice
