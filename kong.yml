@@ -31,6 +31,30 @@ services:
       - name: newsfeedservice
         paths:
           - /newsfeed
+  - name: campaignservice
+    url: http://campaignservice:5000/
+    routes:
+      - name: campaignservice
+        paths:
+          - /campaign
+  - name: adminservice
+    url: http://adminservice:5000/
+    routes:
+      - name: adminservice
+        paths:
+          - /admin
+  - name: agentservice
+    url: http://agentservice:5000/
+    routes:
+      - name: agentservice
+        paths:
+          - /agent
+  - name: messageservice
+    url: http://messageservice:5000/
+    routes:
+      - name: messageservice
+        paths:
+          - /message
 
 plugins:
   - name: rate-limiting
