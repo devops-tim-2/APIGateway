@@ -57,8 +57,15 @@ services:
           - /message
 
 plugins:
+  - name: prometheus
+    enabled: true
+    protocols:
+    - grpc
+    - grpcs
+    - http
+    - https
   - name: rate-limiting
     config:
-      minute: 200
+      minute: 800
       policy: local
   
